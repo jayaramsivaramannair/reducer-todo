@@ -4,13 +4,13 @@ const taskReducer = (state, action) => {
     const { ADD_TASKS, TOGGLE_COMPLETION, CLEAR_TASKS } = actions;
     switch (action.type) {
         case ADD_TASKS:
-            return state;
+            return [...state, action.payload]
         case TOGGLE_COMPLETION:
             return state;
         case CLEAR_TASKS:
             return state;
         default:
-            return state;
+            return [...state]
     }
 }
 
