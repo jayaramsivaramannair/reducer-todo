@@ -3,9 +3,14 @@ import actions from '../Actions/actions.js'
 
 const ToDo = (props) => {
     const { todo, dispatch } = props;
+
+    const markComplete = () => {
+        dispatch({ type: actions.COMPLETE_TASKS, payload: { id: todo.id } })
+    }
+
     return (
         <div style={{ color: todo.completed ? 'red' : '', textDecorationLine: todo.completed ? "line-through" : '' }}
-            onClick={() => dispatch({ type: actions.COMPLETE_TASKS, payload: { id: todo.id } })}>
+            onClick={markComplete}>
             <p>{todo.item}</p>
         </div>
     )
