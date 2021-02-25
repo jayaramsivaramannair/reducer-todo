@@ -14,6 +14,8 @@ const taskReducer = (state, action) => {
             })
         case DELETE_TASKS:
             return state.filter((todo) => !(todo.completed))
+        default:
+            return state;
     }
 }
 
