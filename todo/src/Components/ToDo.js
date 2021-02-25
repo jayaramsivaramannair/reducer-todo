@@ -9,7 +9,7 @@ const ToDo = (props) => {
     }
 
     return (
-        <div style={{ color: todo.completed ? 'red' : '', textDecorationLine: todo.completed ? "line-through" : '' }}
+        <div className="individualTask" style={{ textDecorationLine: todo.completed ? "line-through" : '' }}
             onClick={markComplete}>
             <p>{todo.item}</p>
         </div>

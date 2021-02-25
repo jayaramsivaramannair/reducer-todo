@@ -22,7 +22,7 @@ const Form = (props) => {
     }
 
     return (
-        <div>
+        <div className='taskForm'>
             <form onSubmit={addTaskFunction}>
                 <input
                     name="Task"
@@ -32,7 +32,7 @@ const Form = (props) => {
                 />
                 <button>Add Task</button>
             </form>
-            <button onClick={deleteTaskFunction}>Clear Completed Tasks</button>
+            <button className="clearTaskButton" onClick={deleteTaskFunction}>Clear Completed Tasks</button>
         </div>
     )
 }

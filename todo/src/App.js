@@ -9,11 +9,14 @@ function App() {
   const [todos, dispatch] = useReducer(taskReducer, []);
   return (
     <div className="App">
-      <h1>Reducer ToDo List</h1>
+      <h3>Reducer ToDo List</h3>
       <Form dispatch={dispatch} />
-      {todos && todos.map((todo) => {
-        return <ToDo key={todo.id} todo={todo} dispatch={dispatch} />
-      })}
+      {todos.length === 0 ? <h6>Start Adding Tasks to Keep Yourself on Track</h6> : " "}
+      <div className="taskList">
+        {todos && todos.map((todo) => {
+          return <ToDo key={todo.id} todo={todo} dispatch={dispatch} />
+        })}
+      </div>
     </div>
   );
 }
