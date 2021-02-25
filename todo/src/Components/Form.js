@@ -17,6 +17,10 @@ const Form = (props) => {
         setTask('');
     }
 
+    const deleteTaskFunction = () => {
+        dispatch({ type: actions.DELETE_TASKS })
+    }
+
     return (
         <div>
             <form onSubmit={addTaskFunction}>
@@ -28,7 +32,7 @@ const Form = (props) => {
                 />
                 <button>Add Task</button>
             </form>
-            <button>Clear Completed Tasks</button>
+            <button onClick={deleteTaskFunction}>Clear Completed Tasks</button>
         </div>
     )
 }
