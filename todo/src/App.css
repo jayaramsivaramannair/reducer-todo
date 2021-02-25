@@ -1,0 +1,49 @@
+.App {
+  text-align: center;
+  width: 70%;
+  margin: 10px auto;
+  border-radius: 25px;
+  border: 2px solid magenta;
+  background-color: mediumorchid;
+
+}
+
+.taskForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 60%;
+  margin: 10px auto;
+  border-radius: 10px;
+  background-color: mediumvioletred;
+}
+
+.taskForm form{
+  display: flex;
+  flex-direction: column;
+}
+
+.taskForm form button {
+  margin: 10px 0px;
+}
+
+.taskList {
+  padding: 10px;
+  width: 50%;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+.individualTask {
+  margin: 5px 0px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: mediumvioletred;
+  color: black;
+}
+
+
+
+
