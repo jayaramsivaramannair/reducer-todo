@@ -12,7 +12,7 @@ function App() {
       <h1>Reducer ToDo List</h1>
       <Form dispatch={dispatch} />
       {todos && todos.map((todo) => {
-        return <ToDo key={todo.id} todo={todo} />
+        return <ToDo key={todo.id} todo={todo} dispatch={dispatch} />
       })}
     </div>
   );
